@@ -9,18 +9,15 @@ const app = express();
 connectDB();
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
-const allowedOrigins = [
-  process.env.FRONTEND_URL || 'http://localhost:5173',
-  'http://localhost:5173',
-  'http://localhost:5174',
-  'http://localhost:5175',
-  'http://127.0.0.1:5173',
-  'http://127.0.0.1:5174',
-];
 app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (curl, Postman, etc.)
-    if (!origin || allowedOrigins.includes(origin)) {
+    // Allow any localhost, any vercel app, or explicitly defined FRONTEND_URL
+    if (!origin || 
+        origin.startsWith('http://localhost:') || 
+        origin.startsWith('http://127.0.0.1:') || 
+        origin.endsWith('.vercel.app') || 
+        origin === process.env.FRONTEND_URL) {
       callback(null, true);
     } else {
       callback(new Error(`CORS: origin ${origin} not allowed`));
