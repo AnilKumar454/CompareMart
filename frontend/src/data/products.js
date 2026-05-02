@@ -84,9 +84,9 @@ export const PRODUCTS_DATA = [
     rating: 4.8, reviews: 4120, badge: 'New Arrival',
     description: 'Experience epic energy with the new Ultraboost Light, our lightest ever.',
     comparisons: [
-      { store: 'Amazon', price: 12599, originalPrice: 18999, link: '#', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
-      { store: 'Myntra', price: 12999, originalPrice: 18999, link: '#', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' },
-      { store: 'Adidas', price: 13500, originalPrice: 18999, link: '#', logo: 'A', inStock: true, delivery: 'Delivery in 3 days' }
+      { store: 'Amazon', price: 12599, originalPrice: 18999, link: 'https://www.amazon.in/s?k=Adidas+Ultraboost+Light+Running+Shoes', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
+      { store: 'Myntra', price: 12999, originalPrice: 18999, link: 'https://www.myntra.com/adidas/adidas-men-ultraboost-light-running-shoes/buy', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' },
+      { store: 'Flipkart', price: 13299, originalPrice: 18999, link: 'https://www.flipkart.com/search?q=adidas+ultraboost+light+running+shoes', logo: 'F', inStock: true, delivery: 'Delivery in 3 days' }
     ]
   },
   {
@@ -95,9 +95,9 @@ export const PRODUCTS_DATA = [
     rating: 4.3, reviews: 8520, badge: 'Popular',
     description: 'Comfortable and stylish polo t-shirt for everyday casual wear.',
     comparisons: [
-      { store: 'Amazon', price: 749, originalPrice: 1299, link: '#', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
-      { store: 'Flipkart', price: 799, originalPrice: 1299, link: '#', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' },
-      { store: 'Myntra', price: 850, originalPrice: 1299, link: '#', logo: 'M', inStock: true, delivery: 'Delivery in 3 days' }
+      { store: 'Amazon', price: 749, originalPrice: 1299, link: 'https://www.amazon.in/s?k=Allen+Solly+Men+Polo+Shirt', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
+      { store: 'Flipkart', price: 799, originalPrice: 1299, link: 'https://www.flipkart.com/search?q=allen+solly+men+polo+shirt', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' },
+      { store: 'Myntra', price: 850, originalPrice: 1299, link: 'https://www.myntra.com/allen-solly/polo-shirts/buy', logo: 'M', inStock: true, delivery: 'Delivery in 3 days' }
     ]
   },
   {
@@ -106,9 +106,9 @@ export const PRODUCTS_DATA = [
     rating: 4.7, reviews: 2150, badge: 'Premium',
     description: 'Premium quality slim fit cotton shirt, perfect for formal and semi-formal occasions.',
     comparisons: [
-      { store: 'Myntra', price: 2549, originalPrice: 3999, link: '#', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' },
-      { store: 'Amazon', price: 2699, originalPrice: 3999, link: '#', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
-      { store: 'Tata CLiQ', price: 2799, originalPrice: 3999, link: '#', logo: 'T', inStock: true, delivery: 'Delivery in 3 days' }
+      { store: 'Myntra', price: 2549, originalPrice: 3999, link: 'https://www.myntra.com/tommy-hilfiger/shirts/buy', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' },
+      { store: 'Amazon', price: 2699, originalPrice: 3999, link: 'https://www.amazon.in/s?k=Tommy+Hilfiger+Men+Slim+Fit+Cotton+Shirt', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
+      { store: 'Tata CLiQ', price: 2799, originalPrice: 3999, link: 'https://www.tatacliq.com/tommy-hilfiger-shirts/c-msh11l4/', logo: 'T', inStock: true, delivery: 'Delivery in 3 days' }
     ]
   },
   {
@@ -117,9 +117,9 @@ export const PRODUCTS_DATA = [
     rating: 4.5, reviews: 5410, badge: 'Top Rated',
     description: 'Classic solid formal shirt crafted from premium cotton blend.',
     comparisons: [
-      { store: 'Amazon', price: 1199, originalPrice: 1999, link: '#', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
-      { store: 'Flipkart', price: 1250, originalPrice: 1999, link: '#', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' },
-      { store: 'Myntra', price: 1299, originalPrice: 1999, link: '#', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' }
+      { store: 'Amazon', price: 1199, originalPrice: 1999, link: 'https://www.amazon.in/s?k=Van+Heusen+Men+Solid+Formal+Shirt', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
+      { store: 'Flipkart', price: 1250, originalPrice: 1999, link: 'https://www.flipkart.com/search?q=van+heusen+men+formal+shirt', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' },
+      { store: 'Myntra', price: 1299, originalPrice: 1999, link: 'https://www.myntra.com/van-heusen/formal-shirts/buy', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' }
     ]
   },
   {
@@ -128,8 +128,9 @@ export const PRODUCTS_DATA = [
     rating: 4.6, reviews: 3105, badge: 'Comfort',
     description: 'Get the maximum comfort and cushioning for athletic walking.',
     comparisons: [
-      { store: 'Amazon', price: 3849, originalPrice: 5499, link: '#', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
-      { store: 'Myntra', price: 3999, originalPrice: 5499, link: '#', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' }
+      { store: 'Amazon', price: 3849, originalPrice: 5499, link: 'https://www.amazon.in/s?k=Skechers+Men+Go+Walk+Max+Sneakers', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
+      { store: 'Flipkart', price: 3999, originalPrice: 5499, link: 'https://www.flipkart.com/search?q=skechers+men+go+walk+max', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' },
+      { store: 'Myntra', price: 4199, originalPrice: 5499, link: 'https://www.myntra.com/skechers/sneakers/buy', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' }
     ]
   },
 
