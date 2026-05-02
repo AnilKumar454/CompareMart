@@ -7,7 +7,8 @@ const {
   getMe,
   completeProfile,
   checkEmail,
-  updatePreferences
+  updatePreferences,
+  updateProfile
 } = require('../controllers/authController');
 const { protect } = require('../middleware/auth');
 
@@ -21,5 +22,6 @@ router.post('/check-email', checkEmail);
 router.get('/me', protect, getMe);
 router.put('/complete-profile', protect, completeProfile);
 router.put('/preferences', protect, updatePreferences);
+router.put('/update-profile', protect, updateProfile);
 
 module.exports = router;

@@ -38,6 +38,7 @@ export const authAPI = {
   checkEmail: (email) => api.post('/auth/check-email', { email }),
   getMe: () => api.get('/auth/me'),
   completeProfile: (data) => api.put('/auth/complete-profile', data),
+  updateProfile: (data) => api.put('/auth/update-profile', data),
   updatePreferences: (preferences) => api.put('/auth/preferences', { preferences }),
 };
 

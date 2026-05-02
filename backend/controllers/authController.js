@@ -252,7 +252,47 @@ const checkEmail = async (req, res) => {
   }
 };
 
-// ── Update Preferences ────────────────────────────────────────────────────────
+// ── Update Profile ────────────────────────────────────────────────────────────
+const updateProfile = [
+  body('firstName').trim().notEmpty().withMessage('First name is required'),
+  body('email').trim().isEmail().withMessage('Valid email required').normalizeEmail(),
+  body('phoneNumber').optional({ checkFalsy: true }).matches(/^[+]?[\d\s\-().]{7,20}$/).withMessage('Invalid phone number'),
+  handleValidationErrors,
+  async (req, res) => {
+    try {
+      const { firstName, lastName, email, phoneNumber } = req.body;
+      const uid = req.user._id || req.user.id;
+
+      if (isDBReady()) {
+        // Check if new email is already taken by another user
+        const existingUser = await User.findOne({ email, _id: { $ne: uid } });
+        if (existingUser) return res.status(400).json({ success: false, message: 'This email is already used by another account.' });
+
+        const updateData = { firstName };
+        if (lastName !== undefined) updateData.lastName = lastName;
+        if (email) updateData.email = email;
+        if (phoneNumber !== undefined) updateData.phoneNumber = phoneNumber;
+
+        const user = await User.findByIdAndUpdate(uid, { $set: updateData }, { new: true, runValidators: true });
+        return res.json({ success: true, message: 'Profile updated!', user: user.toSafeObject() });
+      }
+
+      // In-memory path
+      const user = findMemById(uid);
+      if (!user) return res.status(404).json({ success: false, message: 'User not found.' });
+      if (firstName) user.firstName = firstName;
+      if (lastName !== undefined) user.lastName = lastName;
+      if (email) user.email = email.toLowerCase().trim();
+      if (phoneNumber !== undefined) user.phoneNumber = phoneNumber;
+      user.updatedAt = new Date().toISOString();
+      res.json({ success: true, message: 'Profile updated!', user: toSafeUser(user) });
+    } catch (err) {
+      console.error('Update profile error:', err);
+      res.status(500).json({ success: false, message: 'Error updating profile.' });
+    }
+  },
+];
+
 const updatePreferences = async (req, res) => {
   try {
     const { preferences } = req.body;
@@ -271,6 +311,6 @@ const updatePreferences = async (req, res) => {
   }
 };
 
-module.exports = { register, login, googleAuth, getMe, completeProfile, checkEmail, updatePreferences };
+module.exports = { register, login, googleAuth, getMe, completeProfile, checkEmail, updatePreferences, updateProfile };
 
 

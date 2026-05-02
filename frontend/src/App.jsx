@@ -6,6 +6,7 @@ import RegisterPage from './pages/RegisterPage';
 import CompleteProfilePage from './pages/CompleteProfilePage';
 import DashboardPage from './pages/DashboardPage';
 import ComparePage from './pages/ComparePage';
+import EditProfilePage from './pages/EditProfilePage';
 import LoadingScreen from './components/LoadingScreen';
 
 // Protected route wrapper
@@ -13,8 +14,6 @@ function ProtectedRoute({ children }) {
   const { isAuthenticated, isLoading, user } = useAuth();
   if (isLoading) return <LoadingScreen />;
   if (!isAuthenticated) return <Navigate to="/login" replace />;
-  // Redirect to profile completion if needed
-  if (user && !user.isProfileComplete) return <Navigate to="/complete-profile" replace />;
   return children;
 }
 
@@ -23,7 +22,6 @@ function AuthRoute({ children }) {
   const { isAuthenticated, isLoading, user } = useAuth();
   if (isLoading) return <LoadingScreen />;
   if (isAuthenticated) {
-    if (user && !user.isProfileComplete) return <Navigate to="/complete-profile" replace />;
     return <Navigate to="/dashboard" replace />;
   }
   return children;
@@ -56,6 +54,7 @@ function AppRoutes() {
         {/* Protected dashboard */}
         <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
         <Route path="/compare/:id" element={<ProtectedRoute><ComparePage /></ProtectedRoute>} />
+        <Route path="/edit-profile" element={<ProtectedRoute><EditProfilePage /></ProtectedRoute>} />
 
         {/* Default redirect */}
         <Route path="/" element={<Navigate to="/dashboard" replace />} />

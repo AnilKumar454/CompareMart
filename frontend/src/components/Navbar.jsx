@@ -113,7 +113,7 @@ export default function Navbar() {
                   <BarChart2 size={15} /> Dashboard
                 </Link>
                 <Link
-                  to="/complete-profile"
+                  to="/edit-profile"
                   className="dropdown-item"
                   role="menuitem"
                   id="nav-profile"
@@ -122,7 +122,7 @@ export default function Navbar() {
                   <User size={15} /> Edit Profile
                 </Link>
                 <Link
-                  to="/complete-profile"
+                  to="/edit-profile"
                   className="dropdown-item"
                   role="menuitem"
                   id="nav-settings"

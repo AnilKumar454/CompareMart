@@ -77,7 +77,7 @@ export default function RegisterPage() {
     try {
       await register(form.firstName.trim(), form.lastName.trim(), form.email.trim().toLowerCase(), form.password);
       toast.success('Account created! Let\'s set up your profile 🎉');
-      navigate('/complete-profile', { replace: true });
+      navigate('/dashboard', { replace: true });
     } catch (err) {
       const msg = err.response?.data?.message || err.message || 'Registration failed';
       toast.error(msg);

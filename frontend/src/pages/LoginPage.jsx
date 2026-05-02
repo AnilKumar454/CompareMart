@@ -32,7 +32,7 @@ export default function LoginPage() {
     try {
       const { user } = await login(email.trim().toLowerCase(), password);
       toast.success(`Welcome back, ${user.firstName}! 👋`);
-      navigate(user.isProfileComplete ? '/dashboard' : '/complete-profile', { replace: true });
+      navigate('/dashboard', { replace: true });
     } catch (err) {
       const msg = err.response?.data?.message || err.message || 'Login failed';
       toast.error(msg);

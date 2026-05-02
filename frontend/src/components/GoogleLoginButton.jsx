@@ -41,7 +41,7 @@ export default function GoogleLoginButton({ onLoading }) {
     try {
       const { isNewUser } = await googleLogin(response.credential);
       toast.success(isNewUser ? 'Welcome to Compare Mart! 🎉' : 'Welcome back!');
-      navigate(isNewUser ? '/complete-profile' : '/dashboard', { replace: true });
+      navigate('/dashboard', { replace: true });
     } catch (error) {
       const msg = error.response?.data?.message || error.message || 'Google sign-in failed';
       toast.error(msg);
