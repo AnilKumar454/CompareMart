@@ -1,0 +1,22 @@
+{
+  "name": "comparemart",
+  "version": "1.0.0",
+  "description": "Compare Mart - Smart Product Comparison Platform",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "cd backend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.15.0",
+    "lucide-react": "^1.8.0",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.14.1"
+  }
+}
