@@ -27,8 +27,7 @@ export default function GoogleLoginButton({ onLoading }) {
         type: 'standard',
         shape: 'rectangular',
         text: 'continue_with',
-        logo_alignment: 'left',
-        width: 380,
+        logo_alignment: 'left'
       });
     } catch (e) {
       console.warn('Google sign-in init failed:', e);
