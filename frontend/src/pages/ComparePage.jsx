@@ -171,6 +171,12 @@ export default function ComparePage() {
                     href={store.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    onClick={(e) => {
+                      if (store.inStock && store.link) {
+                        e.preventDefault();
+                        window.open(store.link, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
                     style={{
                       background: store.inStock ? 'var(--gradient-primary)' : 'var(--bg-primary)',
                       color: store.inStock ? '#fff' : 'var(--text-muted)',
@@ -180,7 +186,8 @@ export default function ComparePage() {
                       pointerEvents: store.inStock ? 'auto' : 'none',
                       opacity: store.inStock ? 1 : 0.6,
                       boxShadow: store.inStock ? '0 4px 12px rgba(99,102,241,0.2)' : 'none',
-                      transition: 'transform 0.2s'
+                      transition: 'transform 0.2s',
+                      cursor: store.inStock ? 'pointer' : 'default'
                     }}
                   >
                     Go to Store <ExternalLink size={16} />

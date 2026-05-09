@@ -7,7 +7,7 @@ export const PRODUCTS_DATA = [
     description: 'Forged in titanium. A17 Pro chip. Advanced pro camera system. All-new Action button.',
     comparisons: [
       { store: 'Amazon', price: 127990, originalPrice: 134900, link: 'https://www.amazon.in/Apple-iPhone-15-Pro-128/dp/B0CHX1W1XY', logo: 'A', inStock: true, delivery: 'Free Delivery by tomorrow' },
-      { store: 'Flipkart', price: 128490, originalPrice: 134900, link: 'https://www.flipkart.com/apple-iphone-15-pro-natural-titanium-128-gb/p/itm1000b05b8ab1d', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' },
+      { store: 'Flipkart', price: 128490, originalPrice: 134900, link: 'https://www.flipkart.com/search?q=apple+iphone+15+pro+128gb+natural+titanium&otracker=search', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' },
       { store: 'Tata CLiQ', price: 126500, originalPrice: 134900, link: 'https://www.tatacliq.com/apple-iphone-15-pro-128gb-natural-titanium/p-mp000000019642841', logo: 'T', inStock: false, delivery: 'Currently out of stock' },
       { store: 'Croma', price: 129000, originalPrice: 134900, link: 'https://www.croma.com/apple-iphone-15-pro-128gb-natural-titanium-/p/277144', logo: 'C', inStock: true, delivery: 'Store Pickup Available' }
     ]
@@ -19,7 +19,7 @@ export const PRODUCTS_DATA = [
     description: 'Industry leading noise canceling headphones with Auto Noise Canceling Optimizer.',
     comparisons: [
       { store: 'Amazon', price: 21990, originalPrice: 29990, link: 'https://www.amazon.in/Sony-WH-1000XM5-Canceling-Headphones-Optimizing/dp/B09XS7JWHH', logo: 'A', inStock: true, delivery: 'Free Delivery by tomorrow' },
-      { store: 'Flipkart', price: 22490, originalPrice: 29990, link: 'https://www.flipkart.com/sony-wh-1000xm5-active-noise-cancelling-bluetooth-headset/p/itm9b4d8d64111ab', logo: 'F', inStock: true, delivery: 'Free Delivery in 2 days' },
+      { store: 'Flipkart', price: 22490, originalPrice: 29990, link: 'https://www.flipkart.com/search?q=sony+wh-1000xm5+wireless+headphones&otracker=search', logo: 'F', inStock: true, delivery: 'Free Delivery in 2 days' },
       { store: 'Croma', price: 22990, originalPrice: 29990, link: 'https://www.croma.com/sony-wh-1000xm5-bluetooth-headset-with-active-noise-cancellation/p/262590', logo: 'C', inStock: true, delivery: 'Delivery in 3-4 days' }
     ]
   },
@@ -30,7 +30,7 @@ export const PRODUCTS_DATA = [
     description: 'Galaxy AI is here. Epic camera with titanium design.',
     comparisons: [
       { store: 'Amazon', price: 129999, originalPrice: 134999, link: 'https://www.amazon.in/Samsung-Galaxy-Ultra-Titanium-Storage/dp/B0CQYLGC16', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
-      { store: 'Flipkart', price: 129500, originalPrice: 134999, link: 'https://www.flipkart.com/samsung-galaxy-s24-ultra-5g-titanium-gray-256-gb/p/itmd0c32ba06461c', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' }
+      { store: 'Flipkart', price: 129500, originalPrice: 134999, link: 'https://www.flipkart.com/search?q=samsung+galaxy+s24+ultra+5g+256gb&otracker=search', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' }
     ]
   },
   {
@@ -40,7 +40,7 @@ export const PRODUCTS_DATA = [
     description: 'Billion flawless colors with Quantum Dot technology.',
     comparisons: [
       { store: 'Amazon', price: 84990, originalPrice: 139900, link: 'https://www.amazon.in/Samsung-163-cm-inches-QA65QE1CAKLXL/dp/B0C78FXYP8', logo: 'A', inStock: true, delivery: 'Free Delivery + Installation' },
-      { store: 'Flipkart', price: 85500, originalPrice: 139900, link: 'https://www.flipkart.com/samsung-163-cm-65-inch-qled-ultra-hd-4k-smart-tizen-tv/p/itme9d5ebfec325e', logo: 'F', inStock: true, delivery: 'Free Delivery' },
+      { store: 'Flipkart', price: 85500, originalPrice: 139900, link: 'https://www.flipkart.com/search?q=samsung+65+inch+qled+4k+smart+tv&otracker=search', logo: 'F', inStock: true, delivery: 'Free Delivery' },
       { store: 'Reliance', price: 83990, originalPrice: 139900, link: 'https://www.reliancedigital.in/samsung-163-cm-65-inch-ultra-hd-4k-smart-qled-tv-65q60c/p/493664790', logo: 'R', inStock: true, delivery: 'Delivery in 3 days' }
     ]
   },
@@ -52,7 +52,7 @@ export const PRODUCTS_DATA = [
     rating: 4.6, reviews: 1876, badge: 'Best Seller',
     description: 'Legendary Air gets lifted. Nike\'s first lifestyle Air Max brings you style.',
     comparisons: [
-      { store: 'Flipkart', price: 7995, originalPrice: 12995, link: 'https://www.flipkart.com/nike-air-max-270-sneakers-men/p/itm543b593ef90d6', logo: 'F', inStock: true, delivery: 'Free Delivery in 2 days' },
+      { store: 'Flipkart', price: 7995, originalPrice: 12995, link: 'https://www.flipkart.com/search?q=nike+air+max+270+men+sneakers&otracker=search', logo: 'F', inStock: true, delivery: 'Free Delivery in 2 days' },
       { store: 'Nike Official', price: 8200, originalPrice: 12995, link: 'https://www.nike.com/in/t/air-max-270-mens-shoes-KkLcGR/AH8050-002', logo: 'N', inStock: true, delivery: 'Free Delivery by tomorrow' },
       { store: 'Myntra', price: 8500, originalPrice: 12995, link: 'https://www.myntra.com/sports-shoes/nike/nike-men-black-air-max-270-sneakers/13606772/buy', logo: 'M', inStock: true, delivery: 'Delivery in 1-2 days' }
     ]
@@ -65,7 +65,7 @@ export const PRODUCTS_DATA = [
     comparisons: [
       { store: 'Myntra', price: 1649, originalPrice: 2999, link: 'https://www.myntra.com/jeans/levis/levis-men-blue-511-slim-fit-mildly-distressed-stretchable-jeans/11267440/buy', logo: 'M', inStock: true, delivery: 'Delivery in 2 days' },
       { store: 'Amazon', price: 1599, originalPrice: 2999, link: 'https://www.amazon.in/Levis-Mens-Slim-Jeans-18298-1110_Mid/dp/B08M9Y87QK', logo: 'A', inStock: true, delivery: 'Delivery tomorrow' },
-      { store: 'Flipkart', price: 1699, originalPrice: 2999, link: 'https://www.flipkart.com/levi-s-slim-men-blue-jeans/p/itmfffg28gfhzhzy', logo: 'F', inStock: true, delivery: 'Delivery in 3 days' }
+      { store: 'Flipkart', price: 1699, originalPrice: 2999, link: 'https://www.flipkart.com/search?q=levis+511+slim+fit+jeans+men&otracker=search', logo: 'F', inStock: true, delivery: 'Delivery in 3 days' }
     ]
   },
   {
@@ -143,7 +143,7 @@ export const PRODUCTS_DATA = [
     comparisons: [
       { store: 'Pepperfry', price: 24999, originalPrice: 45000, link: 'https://www.pepperfry.com/product/akiko-solid-wood-4-seater-dining-set-in-provincial-teak-finish-by-woodsworth-1658428.html', logo: 'P', inStock: true, delivery: 'Delivery in 5-7 days' },
       { store: 'Amazon', price: 26000, originalPrice: 45000, link: 'https://www.amazon.in/Home-Centre-Costas-Solid-Dining/dp/B09MDBTGH1', logo: 'A', inStock: true, delivery: 'Delivery in 4 days' },
-      { store: 'Flipkart', price: 25500, originalPrice: 45000, link: 'https://www.flipkart.com/flipkart-perfect-homes-sheesham-wood-4-seater-dining-set/p/itmfcgzbzf5a2ztq', logo: 'F', inStock: true, delivery: 'Delivery in 5 days' }
+      { store: 'Flipkart', price: 25500, originalPrice: 45000, link: 'https://www.flipkart.com/search?q=solid+wood+4+seater+dining+table+set&otracker=search', logo: 'F', inStock: true, delivery: 'Delivery in 5 days' }
     ]
   },
   {
@@ -153,7 +153,7 @@ export const PRODUCTS_DATA = [
     description: 'Fully-Automatic Front Load Washing Machine with Inverter Direct Drive.',
     comparisons: [
       { store: 'Amazon', price: 32990, originalPrice: 42990, link: 'https://www.amazon.in/LG-Hygiene-Fully-Automatic-FHM1408BDW-Technology/dp/B0B513XV7T', logo: 'A', inStock: true, delivery: 'Delivery + Installation in 2 days' },
-      { store: 'Flipkart', price: 33500, originalPrice: 42990, link: 'https://www.flipkart.com/lg-8-kg-5-star-inverter-direct-drive-fully-automatic-front-load-washing-machine-in-built-heater-white/p/itm0a2abf9b9f5e3', logo: 'F', inStock: true, delivery: 'Delivery in 3 days' },
+      { store: 'Flipkart', price: 33500, originalPrice: 42990, link: 'https://www.flipkart.com/search?q=lg+8kg+5+star+front+load+washing+machine&otracker=search', logo: 'F', inStock: true, delivery: 'Delivery in 3 days' },
       { store: 'Tata CLiQ', price: 32500, originalPrice: 42990, link: 'https://www.tatacliq.com/lg-8-kg-5-star-fully-automatic-front-load-washing-machine-fhm1408bdw-white/p-mp000000010996884', logo: 'T', inStock: false, delivery: 'Out of Stock' }
     ]
   },
@@ -164,7 +164,7 @@ export const PRODUCTS_DATA = [
     description: 'The most powerful, intelligent cordless vacuum. Reveals invisible dust.',
     comparisons: [
       { store: 'Amazon', price: 44990, originalPrice: 62900, link: 'https://www.amazon.in/Dyson-V15-Detect-Cord-Free-Vacuum/dp/B0B4SHM16F', logo: 'A', inStock: true, delivery: 'Delivery in 1 day' },
-      { store: 'Flipkart', price: 45500, originalPrice: 62900, link: 'https://www.flipkart.com/dyson-v15-detect-cordless-vacuum-cleaner/p/itm5a8459461f8ef', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' }
+      { store: 'Flipkart', price: 45500, originalPrice: 62900, link: 'https://www.flipkart.com/search?q=dyson+v15+detect+cordless+vacuum+cleaner&otracker=search', logo: 'F', inStock: true, delivery: 'Delivery in 2 days' }
     ]
   },
   
