@@ -203,7 +203,7 @@ const getMe = async (req, res) => {
 
 // ── Complete Profile ──────────────────────────────────────────────────────────
 const completeProfile = [
-  body('phoneNumber').optional().matches(/^[+]?[\d\s\-().]{7,20}$/).withMessage('Invalid phone'),
+  body('phoneNumber').optional({ checkFalsy: true }).matches(/^[+]?[\d\s\-().]{7,20}$/).withMessage('Invalid phone'),
   handleValidationErrors,
   async (req, res) => {
     try {

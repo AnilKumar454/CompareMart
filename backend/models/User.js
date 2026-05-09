@@ -55,6 +55,7 @@ const userSchema = new mongoose.Schema({
       type: String,
       enum: ['electronics', 'shoes', 'clothing', 'home', 'sports', 'books', 'beauty', 'toys', 'automotive', 'grocery']
     }],
+    wishlist: [{ type: String }],
     notifications: { type: Boolean, default: true },
     theme: { type: String, enum: ['light', 'dark', 'auto'], default: 'auto' }
   },

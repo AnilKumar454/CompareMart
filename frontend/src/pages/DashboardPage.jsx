@@ -44,15 +44,48 @@ const STATS = [
   { icon: <Star size={20} />,        value: '4.9★',  label: 'Average Rating',     color: '#f59e0b' },
 ];
 
+import { authAPI } from '../services/api';
+import toast from 'react-hot-toast';
+
 function DealCard({ deal }) {
-  const [saved, setSaved] = useState(false);
+  const { user, updateUser } = useAuth();
+  const wishlist = user?.preferences?.wishlist || [];
+  const saved = wishlist.includes(deal.id);
   const savings = deal.originalPrice - deal.salePrice;
+
+  const handleToggleWishlist = async (e) => {
+    e.stopPropagation();
+    if (!user) {
+      toast.error('Please login to save deals');
+      return;
+    }
+    
+    const newWishlist = saved 
+      ? wishlist.filter(id => id !== deal.id)
+      : [...wishlist, deal.id];
+      
+    const newPreferences = { ...user.preferences, wishlist: newWishlist };
+    // Optimistic update
+    updateUser({ ...user, preferences: newPreferences });
+    
+    try {
+      await authAPI.updatePreferences(newPreferences);
+      toast.success(saved ? 'Removed from wishlist' : 'Added to wishlist');
+    } catch (error) {
+      // Revert on error
+      updateUser({ ...user, preferences: { ...user.preferences, wishlist } });
+      toast.error('Failed to update wishlist');
+    }
+  };
 
   return (
     <div
       className="card"
       id={`deal-card-${deal.id}`}
       style={{ cursor: 'pointer', position: 'relative' }}
+      onClick={(e) => {
+        window.location.href = `/compare/${deal.id}`;
+      }}
     >
       {/* Badge */}
       <div style={{
@@ -76,7 +109,7 @@ function DealCard({ deal }) {
           cursor: 'pointer', transition: 'all 0.2s ease',
           zIndex: 1,
         }}
-        onClick={(e) => { e.stopPropagation(); setSaved((s) => !s); }}
+        onClick={handleToggleWishlist}
         aria-label="Save to wishlist"
         id={`wishlist-${deal.id}`}
       >

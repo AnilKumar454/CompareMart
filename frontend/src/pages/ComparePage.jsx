@@ -128,7 +128,7 @@ export default function ComparePage() {
                     border: '1px solid #e2e8f0', boxShadow: '0 2px 4px rgba(0,0,0,0.05)', overflow: 'hidden', padding: '6px'
                   }}>
                     {store.store === 'Amazon' && <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style={{ width: '100%' }} />}
-                    {store.store === 'Flipkart' && <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Flipkart_logo.svg" alt="Flipkart" style={{ width: '100%' }} />}
+                    {store.store === 'Flipkart' && <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Flipkart_logo.svg/300px-Flipkart_logo.svg.png" alt="Flipkart" style={{ width: '100%' }} />}
                     {store.store === 'Nykaa' && <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Nykaa_New_Logo.png" alt="Nykaa" style={{ width: '100%' }} />}
                     {store.store === 'Myntra' && <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png" alt="Myntra" style={{ width: '80%' }} />}
                     {store.store === 'Tata CLiQ' && <img src="https://www.tatacliq.com/favicon.ico" alt="Tata CLiQ" style={{ width: '80%' }} />}
